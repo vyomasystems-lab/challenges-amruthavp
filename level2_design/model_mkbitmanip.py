@@ -7,6 +7,7 @@ import operator
 from cocotb.result import ReturnValue
 
 def bitmanip(mav_putvalue_instr, mav_putvalue_src1,mav_putvalue_src2, mav_putvalue_src3):
+    print("hi")
     instr=hex(mav_putvalue_instr)[2:]
     le=int(instr,16) #convert Hex  to int
     le=bin(le)[2:] #convert int to binary
@@ -768,7 +769,7 @@ def bitmanip(mav_putvalue_instr, mav_putvalue_src1,mav_putvalue_src2, mav_putval
 
 
 
-    #print('--INVALID ')
+    print('--INVALID ')
     return 0
 
 
