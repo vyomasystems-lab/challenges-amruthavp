@@ -4,7 +4,7 @@
 
 ## Verification Environment
 
-The test drives inputs to the Design Under Test (adder module here) which takes in 1-bit inputs inp and gives 1 bit output to check if sequence was detected.
+The test drives inputs to the Design Under Test which takes in 1-bit inputs inp and gives 1 bit output to check if sequence was detected.
 
 The values are assigned to the input port using 
 
