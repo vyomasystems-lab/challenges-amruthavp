@@ -5,7 +5,7 @@ A bidirectional shift register is a type of register which can have its contents
 ![image](https://user-images.githubusercontent.com/46755232/182200758-f276857e-95d4-4674-9e67-e5b10fa3d1a5.png)
 
 ## Verification Environment
-The test drives inputs to the Design Under Test (adder module here) which takes in 4 data inputs *D*, clock input and 2 select inputs *S* and gives 4-bit shifted output 
+The test drives inputs to the Design Under Test which takes in 4 data inputs *D*, clock input and 2 select inputs *S* and gives 4-bit shifted output 
 
 The values are assigned to the input port using 
 
