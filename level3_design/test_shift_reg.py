@@ -1,0 +1,46 @@
+import os
+import random
+from pathlib import Path
+
+import cocotb
+from cocotb.clock import Clock
+from cocotb.triggers import RisingEdge, FallingEdge
+
+@cocotb.test()
+async def test_seq_bug1(dut):
+    """Test for seq detection """
+
+    clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
+    cocotb.start_soon(clock.start())        # Start the clock
+    # dut.current_state.value=4
+    # dut.next_state.value=4
+    # reset
+
+
+    dut.D0.value= 1 
+    dut.D1.value= 1 
+    dut.D2.value= 1 
+    dut.D3.value= 1 
+    dut.S0.value= 1 
+    dut.S1.value= 1 
+    cocotb.log.info("HERE")
+    cocotb.log.info(dut.Q0.value)
+
+    # dut.inp_bit = 0
+    # await FallingEdge(dut.clk)
+    # dut.inp_bit = 1
+    # await FallingEdge(dut.clk)
+    # dut.inp_bit = 1
+    # await FallingEdge(dut.clk)    
+    # dut.inp_bit = 0
+    # await FallingEdge(dut.clk)
+    # dut.inp_bit = 1
+    # await FallingEdge(dut.clk)
+    # dut.inp_bit = 1
+    # await FallingEdge(dut.clk) 
+
+    # cocotb.log.info(dut.next_state.value)
+    # cocotb.log.info(dut.seq_seen.value)
+
+    cocotb.log.info('#### CTB: Develop your test here! ######')
+    assert dut.Q0.value == 1, f"Sequence detector result is incorrect for input"
