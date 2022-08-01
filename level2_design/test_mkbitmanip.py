@@ -38,7 +38,11 @@ def run_test(dut):
     mav_putvalue_src2 = 0x0
     mav_putvalue_src3 = 0x0
     mav_putvalue_instr = 0x101010B3
-
+    
+    SRC1_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
+    SRC2_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
+    SRC3_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
+    Instruction = map(''.join, product('0123456789ABCDEF', repeat=2))
     # expected output from the model
     expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
 
