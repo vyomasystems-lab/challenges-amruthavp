@@ -4,10 +4,10 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/               # provide your design path
+VERILOG_SOURCES = $(PWD)/shift_reg.v               # provide your design path
 
-TOPLEVEL :=  shift_reg         # design file
-MODULE   :=  test_shift_reg   # test file
+TOPLEVEL := shift_reg
+MODULE   := test_shift_reg
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 

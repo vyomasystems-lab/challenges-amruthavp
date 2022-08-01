@@ -19,7 +19,7 @@ module shift_reg(Q3, Q2, Q1, Q0, D3, D2, D1, D0, S1, S0, CLK);
    d_flip_flop_edge_triggered dff0(Q0, Q0n, CLK, X0);
    multiplexer_4_1 #(1) mux1(X1, Q0, Q2, Q1, D1, S1, S0);   
    d_flip_flop_edge_triggered dff1(Q1, Q1n, CLK, X1);
-   multiplexer_4_1 #(1) mux2(X2, Q1, Q3, Q2, D2, S1, S0);   
+   multiplexer_4_1 #(1) mux2(X2, Q2, Q3, Q2, D2, S1, S0);   
    d_flip_flop_edge_triggered dff2(Q2, Q2n, CLK, X2);
    multiplexer_4_1 #(1) mux3(X3, Q2, Q0, Q3, D3, S1, S0);   
    d_flip_flop_edge_triggered dff3(Q3, Q3n, CLK, X3);
