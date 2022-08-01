@@ -1,5 +1,5 @@
 	
-module shift_register_bidirectional(Q3, Q2, Q1, Q0, D3, D2, D1, D0, S1, S0, CLK);   
+module shift_reg(Q3, Q2, Q1, Q0, D3, D2, D1, D0, S1, S0, CLK);   
    output Q3;  // Register output most significant bit.
    output Q2;
    output Q1;

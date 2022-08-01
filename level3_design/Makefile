@@ -6,8 +6,8 @@ PWD=$(shell pwd)
 
 VERILOG_SOURCES = $(PWD)/               # provide your design path
 
-TOPLEVEL := shift_req          # design file
-MODULE   :=  test_shift_req   # test file
+TOPLEVEL :=  shift_reg         # design file
+MODULE   :=  test_shift_reg   # test file
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
