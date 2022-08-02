@@ -5,6 +5,11 @@
 The test drives inputs to the Design Under Test which takes in 4 32-bit inputs AND GIVES OUT 32 BIT OUTPUT
 
 The values are assigned to the input port using
+    
+    mav_putvalue_src1 = 0x5
+    mav_putvalue_src2 = 0x5
+    mav_putvalue_src3 = 0x0
+    mav_putvalue_instr = 0x4007033
 
     SRC1_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
     SRC2_Values = map(''.join, product('0123456789ABCDEF', repeat=8))
@@ -19,16 +24,18 @@ The following error is seen:
     assert dut_output == expected_mav_putvalue, error_message
     
 ## Test Scenario
-   mav_putvalue_src1 = 0x5
-    mav_putvalue_src2 = 0x0
+    mav_putvalue_src1 = 0x5
+    mav_putvalue_src2 = 0x5
     mav_putvalue_src3 = 0x0
     mav_putvalue_instr = 0x4007033
+    DUT =0xb
+    Actual output: 0x1
     
     
  # Design Bug
 Based on the above test input and analysing the design, we see the following
 
-
+AssertionError: Value mismatch DUT = 0xb does not match MODEL = 0x1
 
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
